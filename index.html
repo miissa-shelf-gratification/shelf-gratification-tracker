@@ -170,8 +170,6 @@
             display: flex;
             align-items: flex-start;
             gap: 10px;
-            position: relative;
-            transition: all 0.3s ease;
         }
 
         .task-item.completed {
@@ -378,246 +376,6 @@
             opacity: 0;
             pointer-events: none;
             transition: all 0.3s ease;
-            animation: kawaii-bounce 0.6s ease-in-out;
-        }
-
-        /* Kawaii celebration animations */
-        @keyframes kawaii-bounce {
-            0% { transform: translate(-50%, -50%) scale(0) rotate(0deg); }
-            50% { transform: translate(-50%, -50%) scale(1.2) rotate(5deg); }
-            100% { transform: translate(-50%, -50%) scale(1) rotate(0deg); }
-        }
-
-        @keyframes sparkle {
-            0%, 100% { opacity: 0; transform: scale(0) rotate(0deg); }
-            50% { opacity: 1; transform: scale(1) rotate(180deg); }
-        }
-
-        @keyframes float-up {
-            0% { opacity: 1; transform: translateY(0px); }
-            100% { opacity: 0; transform: translateY(-100px); }
-        }
-
-        @keyframes wiggle {
-            0%, 100% { transform: rotate(0deg); }
-            25% { transform: rotate(5deg); }
-            75% { transform: rotate(-5deg); }
-        }
-
-        /* Kawaii progress bar animation */
-        .timeline-progress {
-            background: linear-gradient(90deg, 
-                var(--bubblegum-pink) 0%, 
-                var(--lavender-dream) 50%, 
-                var(--mint-fresh) 100%);
-            position: relative;
-            overflow: visible;
-        }
-
-        .timeline-progress::after {
-            content: '✨';
-            position: absolute;
-            right: -10px;
-            top: 50%;
-            transform: translateY(-50%);
-            font-size: 12px;
-            animation: sparkle 2s infinite;
-        }
-
-        /* Kawaii task completion effect */
-        .task-item.completed {
-            background: linear-gradient(135deg, var(--mint-fresh), var(--sunshine-yellow));
-            animation: kawaii-bounce 0.5s ease-in-out;
-        }
-
-        .task-item.completed::after {
-            content: '🌟';
-            position: absolute;
-            right: 10px;
-            top: 50%;
-            transform: translateY(-50%);
-            animation: sparkle 1.5s infinite;
-        }
-
-        /* Cute button hover effects */
-        .nav-btn:hover {
-            animation: wiggle 0.3s ease-in-out;
-        }
-
-        /* Kawaii workstream icons with animations */
-        .workstream-icon {
-            position: relative;
-            transition: all 0.3s ease;
-        }
-
-        .workstream-icon:hover {
-            transform: scale(1.1);
-            animation: wiggle 0.5s ease-in-out;
-        }
-
-        .workstream-icon::after {
-            content: '✨';
-            position: absolute;
-            top: -5px;
-            right: -5px;
-            font-size: 8px;
-            opacity: 0;
-            animation: sparkle 2s infinite;
-        }
-
-        /* Floating hearts for celebrations */
-        .celebration-hearts {
-            position: fixed;
-            top: 0;
-            left: 0;
-            width: 100%;
-            height: 100%;
-            pointer-events: none;
-            z-index: 999;
-        }
-
-        .heart {
-            position: absolute;
-            color: var(--cherry-pop);
-            font-size: 20px;
-            animation: float-up 3s ease-out forwards;
-        }
-
-        /* Cute confetti */
-        .confetti {
-            position: absolute;
-            width: 10px;
-            height: 10px;
-            border-radius: 50%;
-            animation: float-up 3s ease-out forwards;
-        }
-
-        .confetti:nth-child(1) { background: var(--bubblegum-pink); }
-        .confetti:nth-child(2) { background: var(--lavender-dream); }
-        .confetti:nth-child(3) { background: var(--mint-fresh); }
-        .confetti:nth-child(4) { background: var(--sunshine-yellow); }
-        .confetti:nth-child(5) { background: var(--cherry-pop); }
-
-        /* Day status cute styling */
-        #dayStatus {
-            position: relative;
-            animation: wiggle 2s infinite;
-        }
-
-        #dayStatus::before {
-            content: '✨';
-            position: absolute;
-            left: -20px;
-            animation: sparkle 2s infinite;
-        }
-
-        #dayStatus::after {
-            content: '✨';
-            position: absolute;
-            right: -20px;
-            animation: sparkle 2s infinite 0.5s;
-        }
-
-        /* Kawaii workstream icon styles */
-        .kawaii-brand::before {
-            content: '✨';
-            position: absolute;
-            top: -3px;
-            right: -3px;
-            font-size: 8px;
-            animation: sparkle 2s infinite;
-        }
-
-        .kawaii-automation::before {
-            content: '⚡';
-            position: absolute;
-            top: -3px;
-            right: -3px;
-            font-size: 8px;
-            animation: sparkle 2s infinite 0.5s;
-        }
-
-        .kawaii-platform::before {
-            content: '💫';
-            position: absolute;
-            top: -3px;
-            right: -3px;
-            font-size: 8px;
-            animation: sparkle 2s infinite 1s;
-        }
-
-        .kawaii-community::before {
-            content: '💕';
-            position: absolute;
-            top: -3px;
-            right: -3px;
-            font-size: 8px;
-            animation: sparkle 2s infinite 1.5s;
-        }
-
-        /* Enhanced workstream progress bars */
-        .timeline-progress {
-            background: linear-gradient(90deg, 
-                var(--bubblegum-pink) 0%, 
-                var(--lavender-dream) 50%, 
-                var(--mint-fresh) 100%);
-            position: relative;
-            overflow: visible;
-            box-shadow: 0 2px 8px rgba(255, 182, 217, 0.3);
-        }
-
-        .timeline-progress::after {
-            content: '✨';
-            position: absolute;
-            right: -10px;
-            top: 50%;
-            transform: translateY(-50%);
-            font-size: 12px;
-            animation: sparkle 2s infinite;
-        }
-
-        /* Kawaii navigation buttons */
-        .nav-btn {
-            position: relative;
-            overflow: visible;
-        }
-
-        .nav-btn:hover::after {
-            content: '💖';
-            position: absolute;
-            top: -10px;
-            right: -10px;
-            font-size: 12px;
-            animation: kawaii-bounce 0.5s ease-in-out;
-        }
-
-        /* Cute day counter styling */
-        #dayCounter {
-            background: linear-gradient(135deg, var(--bubblegum-pink), var(--lavender-dream));
-            -webkit-background-clip: text;
-            -webkit-text-fill-color: transparent;
-            background-clip: text;
-            position: relative;
-        }
-
-        #dayCounter::before {
-            content: '🌟';
-            position: absolute;
-            left: -30px;
-            top: 50%;
-            transform: translateY(-50%);
-            font-size: 20px;
-            animation: sparkle 2s infinite;
-        }
-
-        #dayCounter::after {
-            content: '🌟';
-            position: absolute;
-            right: -30px;
-            top: 50%;
-            transform: translateY(-50%);
-            font-size: 20px;
-            animation: sparkle 2s infinite 1s;
         }
 
         .modal {
@@ -659,128 +417,21 @@
             
             .main-nav {
                 justify-content: center;
-                gap: 5px;
             }
             
             .nav-btn {
                 flex: 1;
-                min-width: 100px;
-                padding: 8px 12px;
-                font-size: 12px;
-            }
-            
-            .date-selector {
-                padding: 15px;
-            }
-            
-            .date-selector > div {
-                gap: 10px !important;
-            }
-            
-            .date-input {
-                padding: 8px 10px;
-                font-size: 14px;
-                margin: 0 5px;
-            }
-            
-            #dayCounter {
-                font-size: 20px !important;
-            }
-            
-            .day-header {
-                flex-direction: column;
-                gap: 10px;
-                text-align: center;
-            }
-            
-            .day-title {
-                font-size: 18px !important;
-            }
-            
-            .task-item {
-                flex-direction: column;
-                gap: 8px;
-                padding: 12px;
-            }
-            
-            .task-content {
-                order: 1;
-            }
-            
-            .time-estimate {
-                order: 2;
-                align-self: flex-end;
-                font-size: 11px;
-            }
-            
-            .task-checkbox {
-                order: 0;
-                align-self: flex-start;
-                margin-bottom: 5px;
-            }
-            
-            .reference-grid {
-                grid-template-columns: 1fr;
-                gap: 15px;
-            }
-            
-            .reference-card {
-                padding: 15px;
+                min-width: 120px;
             }
             
             .quick-actions {
                 bottom: 10px;
                 right: 10px;
-                gap: 8px;
             }
             
-            .action-btn {
-                width: 50px;
-                height: 50px;
-                font-size: 20px;
-            }
-            
-            .modal-content {
-                padding: 20px;
-                width: 95%;
-                margin: 20px;
-            }
-            
-            .notes-textarea {
-                min-height: 60px;
-                padding: 10px;
-            }
-            
-            .progress-timeline {
-                margin: 20px 0;
-            }
-            
-            .workstream {
-                margin-bottom: 20px;
-            }
-            
-            .workstream-title {
-                font-size: 14px;
-            }
-            
-            .timeline-days {
-                font-size: 9px;
-            }
-            
-            /* Better touch targets */
-            .nav-btn, .task-checkbox, .action-btn {
-                min-height: 44px;
-                min-width: 44px;
-            }
-            
-            /* Improved scrolling */
-            .section {
-                -webkit-overflow-scrolling: touch;
-            }
-            
-            /* Better text readability */
-            .task-detail {
-                font-size: 13px;
+            .day-header {
+                flex-direction: column;
+                gap: 10px;
             }
         }
     </style>
@@ -795,6 +446,7 @@
         <nav class="main-nav">
             <button class="nav-btn active" data-section="today">📅 Today's Tasks</button>
             <button class="nav-btn" data-section="progress">📊 Progress Timeline</button>
+            <button class="nav-btn" data-section="trends">🔍 Trend Monitor</button>
             <button class="nav-btn" data-section="reference">📖 Brand Reference</button>
             <button class="nav-btn" data-section="setup">⚙️ Setup & Export</button>
         </nav>
@@ -802,29 +454,12 @@
         <!-- Today's Tasks Section -->
         <div id="today" class="section active">
             <div class="date-selector">
-                <h3>📅 Launch Progress</h3>
-                <div style="display: flex; align-items: center; justify-content: center; gap: 15px; flex-wrap: wrap; margin-bottom: 15px;">
-                    <button class="nav-btn" onclick="navigateDay(-1)" id="prevBtn" title="Previous Day">◀️</button>
-                    <div style="text-align: center; min-width: 200px;">
-                        <div style="font-size: 24px; font-weight: bold; color: var(--deep-purple);" id="dayCounter">Day 1</div>
-                        <div style="font-size: 12px; color: var(--deep-purple);" id="dayProgress">1 of 90 days</div>
-                    </div>
-                    <button class="nav-btn" onclick="navigateDay(1)" id="nextBtn" title="Next Day">▶️</button>
-                </div>
-                <div style="display: flex; align-items: center; justify-content: center; gap: 20px; flex-wrap: wrap;">
-                    <div>
-                        <label>Launch Start:</label>
-                        <input type="date" id="startDate" class="date-input" value="2025-06-01" readonly style="background: rgba(255,255,255,0.8);">
-                    </div>
-                    <div>
-                        <label>Today:</label>
-                        <input type="date" id="currentDate" class="date-input" readonly style="background: rgba(255,255,255,0.8);">
-                    </div>
-                    <button class="nav-btn" onclick="jumpToToday()" id="todayBtn" title="Jump to Today">📅 Today</button>
-                </div>
-                <div style="margin-top: 10px; text-align: center;">
-                    <div id="dayStatus" style="font-size: 14px; padding: 5px 15px; border-radius: 15px; display: inline-block;"></div>
-                </div>
+                <h3>📅 Launch Day Calculator</h3>
+                <label>Launch Start Date (June 1, 2025):</label>
+                <input type="date" id="startDate" class="date-input" value="2025-06-01">
+                <label>Today's Date:</label>
+                <input type="date" id="currentDate" class="date-input">
+                <button class="nav-btn" onclick="calculateDay()">Calculate Day</button>
             </div>
 
             <div class="current-day-card" id="dayCard">
@@ -895,13 +530,11 @@
             <div class="progress-timeline">
                 <div class="workstream">
                     <div class="workstream-header">
-                        <div class="workstream-icon kawaii-brand" style="background: var(--bubblegum-pink);">
-                            <span style="font-size: 16px;">📚</span>
-                        </div>
+                        <div class="workstream-icon" style="background: var(--bubblegum-pink);">🎨</div>
                         <div class="workstream-title">Brand & Content</div>
                     </div>
                     <div class="timeline-bar">
-                        <div class="timeline-progress" data-workstream="brand" style="width: 5%; background: linear-gradient(90deg, var(--bubblegum-pink), var(--cherry-pop));"></div>
+                        <div class="timeline-progress" data-workstream="brand" style="width: 5%; background: var(--bubblegum-pink);"></div>
                     </div>
                     <div class="timeline-days">
                         <span>Day 1</span>
@@ -916,13 +549,11 @@
 
                 <div class="workstream">
                     <div class="workstream-header">
-                        <div class="workstream-icon kawaii-automation" style="background: var(--mint-fresh);">
-                            <span style="font-size: 16px;">⚡</span>
-                        </div>
+                        <div class="workstream-icon" style="background: var(--mint-fresh);">🤖</div>
                         <div class="workstream-title">Automation & Tools</div>
                     </div>
                     <div class="timeline-bar">
-                        <div class="timeline-progress" data-workstream="automation" style="width: 3%; background: linear-gradient(90deg, var(--mint-fresh), var(--sunshine-yellow));"></div>
+                        <div class="timeline-progress" data-workstream="automation" style="width: 3%; background: var(--mint-fresh);"></div>
                     </div>
                     <div class="timeline-days">
                         <span>Day 1</span>
@@ -937,13 +568,11 @@
 
                 <div class="workstream">
                     <div class="workstream-header">
-                        <div class="workstream-icon kawaii-platform" style="background: var(--sunshine-yellow);">
-                            <span style="font-size: 16px;">🛍️</span>
-                        </div>
+                        <div class="workstream-icon" style="background: var(--sunshine-yellow);">🛍️</div>
                         <div class="workstream-title">Platform & Sales</div>
                     </div>
                     <div class="timeline-bar">
-                        <div class="timeline-progress" data-workstream="platform" style="width: 2%; background: linear-gradient(90deg, var(--sunshine-yellow), var(--cherry-pop));"></div>
+                        <div class="timeline-progress" data-workstream="platform" style="width: 2%; background: var(--sunshine-yellow);"></div>
                     </div>
                     <div class="timeline-days">
                         <span>Day 1</span>
@@ -958,13 +587,11 @@
 
                 <div class="workstream">
                     <div class="workstream-header">
-                        <div class="workstream-icon kawaii-community" style="background: var(--lavender-dream);">
-                            <span style="font-size: 16px;">💖</span>
-                        </div>
+                        <div class="workstream-icon" style="background: var(--lavender-dream);">💖</div>
                         <div class="workstream-title">Inclusive Community</div>
                     </div>
                     <div class="timeline-bar">
-                        <div class="timeline-progress" data-workstream="community" style="width: 4%; background: linear-gradient(90deg, var(--lavender-dream), var(--bubblegum-pink));"></div>
+                        <div class="timeline-progress" data-workstream="community" style="width: 4%; background: var(--lavender-dream);"></div>
                     </div>
                     <div class="timeline-days">
                         <span>Day 1</span>
@@ -975,6 +602,192 @@
                         <span>Day 75</span>
                         <span>Day 90</span>
                     </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Trend Monitoring Setup Section -->
+        <div id="trends" class="section">
+            <h2>🔍 Bookish Trend Monitoring Setup</h2>
+            
+            <div class="reference-card" style="background: linear-gradient(135deg, var(--mint-fresh), var(--lavender-dream)); margin-bottom: 25px;">
+                <h3 style="color: white; margin-bottom: 15px;">🎯 Why Trend Monitoring Changes Everything</h3>
+                <div style="color: white; font-size: 14px;">
+                    <div style="margin: 8px 0;">✨ <strong>Catch trends 1-2 weeks before competitors</strong></div>
+                    <div style="margin: 8px 0;">📈 <strong>25-40% improvement in listing visibility</strong></div>
+                    <div style="margin: 8px 0;">🎨 <strong>Automatic trending keyword integration</strong></div>
+                    <div style="margin: 8px 0;">⚡ <strong>Daily email alerts for hot opportunities</strong></div>
+                    <div style="margin: 8px 0;">🚀 <strong>Foundation for all future automation</strong></div>
+                </div>
+            </div>
+
+            <div class="reference-grid">
+                <div class="reference-card">
+                    <h3>📚 Step 1: Get API Access (10 min)</h3>
+                    <div class="reference-item">
+                        <strong>1.</strong> Go to <a href="https://serpapi.com" target="_blank" style="color: var(--cherry-pop);">serpapi.com</a>
+                    </div>
+                    <div class="reference-item">
+                        <strong>2.</strong> Click "Sign Up" → Choose "Free Plan" (100 searches/month)
+                    </div>
+                    <div class="reference-item">
+                        <strong>3.</strong> Verify email → Dashboard → Copy API Key
+                    </div>
+                    <div class="reference-item">
+                        <strong>💾 Save API Key:</strong> <input type="text" placeholder="Paste your API key here" id="apiKeyInput" style="width: 100%; margin-top: 5px; padding: 5px; border: 1px solid var(--bubblegum-pink); border-radius: 5px;">
+                    </div>
+                    <button class="nav-btn" onclick="saveApiKey()" style="margin-top: 10px;">Save API Key</button>
+                </div>
+
+                <div class="reference-card">
+                    <h3>🤖 Step 2: Create Make.com Scenario (20 min)</h3>
+                    <div class="reference-item">
+                        <strong>1.</strong> Login to Make.com → "Create new scenario"
+                    </div>
+                    <div class="reference-item">
+                        <strong>2.</strong> Name: "Bookish Trends Monitor"
+                    </div>
+                    <div class="reference-item">
+                        <strong>3.</strong> Add Schedule trigger → "Every day" → 9:00 AM
+                    </div>
+                    <div class="reference-item">
+                        <strong>4.</strong> Follow detailed setup guide below ⬇
+                    </div>
+                    <label style="display: flex; align-items: center; margin-top: 10px;">
+                        <input type="checkbox" onchange="toggleSetupStep(this, 'makecom')" style="margin-right: 8px;">
+                        <span>Make.com scenario created</span>
+                    </label>
+                </div>
+
+                <div class="reference-card">
+                    <h3>📧 Step 3: Test & Activate (10 min)</h3>
+                    <div class="reference-item">
+                        <strong>1.</strong> Click "Run once" in Make.com
+                    </div>
+                    <div class="reference-item">
+                        <strong>2.</strong> Check for green checkmarks on all modules
+                    </div>
+                    <div class="reference-item">
+                        <strong>3.</strong> Verify email received (check spam folder)
+                    </div>
+                    <div class="reference-item">
+                        <strong>4.</strong> Turn scenario ON (toggle switch)
+                    </div>
+                    <label style="display: flex; align-items: center; margin-top: 10px;">
+                        <input type="checkbox" onchange="toggleSetupStep(this, 'testing')" style="margin-right: 8px;">
+                        <span>System tested and activated</span>
+                    </label>
+                </div>
+            </div>
+
+            <div class="reference-card" style="margin-top: 25px;">
+                <h3>⚙️ Detailed Make.com Configuration</h3>
+                <div style="background: var(--cream); padding: 15px; border-radius: 10px; margin: 15px 0; font-family: monospace; font-size: 12px;">
+                    <strong>Module 1: Schedule Trigger</strong><br>
+                    • Type: Schedule → Every day<br>
+                    • Time: 9:00 AM<br><br>
+                    
+                    <strong>Module 2: HTTP Request (Google Trends)</strong><br>
+                    • URL: https://serpapi.com/search.json<br>
+                    • Method: GET<br>
+                    • Query Parameters:<br>
+                    &nbsp;&nbsp;engine=google_trends<br>
+                    &nbsp;&nbsp;q=bookish accessories,kindle stickers,book bookmarks,reading aesthetic,booktok<br>
+                    &nbsp;&nbsp;date=today 7-d<br>
+                    &nbsp;&nbsp;geo=US<br>
+                    &nbsp;&nbsp;api_key=<span id="displayApiKey" style="color: var(--cherry-pop);">[Your API Key]</span><br><br>
+                    
+                    <strong>Module 3: ChatGPT Analysis</strong><br>
+                    • Model: gpt-4<br>
+                    • Max Tokens: 1000<br>
+                    • Prompt: [See detailed prompt below]<br><br>
+                    
+                    <strong>Module 4: Gmail Alert</strong><br>
+                    • To: milissa.d.campbell@gmail.com<br>
+                    • Subject: 🔥 Daily Bookish Trends Report<br>
+                    • Content: [Formatted trend analysis]
+                </div>
+                
+                <button class="nav-btn" onclick="copyMakecomConfig()" style="margin-top: 10px;">📋 Copy Configuration</button>
+                <button class="nav-btn" onclick="showChatGPTPrompt()" style="margin-top: 10px; margin-left: 10px;">💬 View ChatGPT Prompt</button>
+            </div>
+
+            <div class="reference-card" style="margin-top: 25px;">
+                <h3>🎯 Integration with Existing Automation</h3>
+                <div class="reference-item">
+                    <strong>Manual Integration (Week 1):</strong> Use trending keywords from daily emails in your Etsy listings
+                </div>
+                <div class="reference-item">
+                    <strong>Semi-Automated (Week 2):</strong> Update existing ChatGPT prompts to include trending terms
+                </div>
+                <div class="reference-item">
+                    <strong>Full Automation (Week 3+):</strong> Connect trends directly to listing automation pipeline
+                </div>
+                
+                <div style="background: var(--sunshine-yellow); padding: 15px; border-radius: 10px; margin: 15px 0;">
+                    <strong>📈 Expected Results:</strong><br>
+                    • Day 1: First trend report in your inbox<br>
+                    • Week 1: 3-5 trending opportunities identified<br>
+                    • Month 1: 25-40% improvement in listing visibility<br>
+                    • Month 3: Automated trend-to-product pipeline
+                </div>
+            </div>
+
+            <div class="reference-card" style="margin-top: 25px;">
+                <h3>🔧 Troubleshooting Guide</h3>
+                <div class="reference-item">
+                    <strong>No email received:</strong> Check spam folder, verify Gmail connection in Make.com
+                </div>
+                <div class="reference-item">
+                    <strong>API error:</strong> Double-check SerpAPI key, verify free tier limits (100/month)
+                </div>
+                <div class="reference-item">
+                    <strong>ChatGPT failure:</strong> Check OpenAI API credits, verify connection is active
+                </div>
+                <div class="reference-item">
+                    <strong>Scenario won't run:</strong> Check ON toggle, verify schedule settings, test modules individually
+                </div>
+                
+                <button class="nav-btn" onclick="showTroubleshootingSteps()" style="margin-top: 10px;">🛠️ Detailed Troubleshooting</button>
+            </div>
+
+            <div class="reference-card" style="margin-top: 25px; background: linear-gradient(135deg, var(--cherry-pop), var(--sunshine-yellow));">
+                <h3 style="color: white;">🚀 Setup Progress Tracker</h3>
+                <div style="color: white;">
+                    <label style="display: flex; align-items: center; margin: 8px 0;">
+                        <input type="checkbox" id="step1" onchange="updateTrendProgress()" style="margin-right: 8px;">
+                        <span>API key obtained and saved</span>
+                    </label>
+                    <label style="display: flex; align-items: center; margin: 8px 0;">
+                        <input type="checkbox" id="step2" onchange="updateTrendProgress()" style="margin-right: 8px;">
+                        <span>Make.com scenario created</span>
+                    </label>
+                    <label style="display: flex; align-items: center; margin: 8px 0;">
+                        <input type="checkbox" id="step3" onchange="updateTrendProgress()" style="margin-right: 8px;">
+                        <span>HTTP module configured</span>
+                    </label>
+                    <label style="display: flex; align-items: center; margin: 8px 0;">
+                        <input type="checkbox" id="step4" onchange="updateTrendProgress()" style="margin-right: 8px;">
+                        <span>ChatGPT module added</span>
+                    </label>
+                    <label style="display: flex; align-items: center; margin: 8px 0;">
+                        <input type="checkbox" id="step5" onchange="updateTrendProgress()" style="margin-right: 8px;">
+                        <span>Gmail alert configured</span>
+                    </label>
+                    <label style="display: flex; align-items: center; margin: 8px 0;">
+                        <input type="checkbox" id="step6" onchange="updateTrendProgress()" style="margin-right: 8px;">
+                        <span>Scenario tested successfully</span>
+                    </label>
+                    <label style="display: flex; align-items: center; margin: 8px 0;">
+                        <input type="checkbox" id="step7" onchange="updateTrendProgress()" style="margin-right: 8px;">
+                        <span>Automation activated</span>
+                    </label>
+                    
+                    <div id="trendProgressBar" style="background: rgba(255,255,255,0.3); height: 20px; border-radius: 10px; margin: 15px 0; overflow: hidden;">
+                        <div id="trendProgress" style="width: 0%; height: 100%; background: white; border-radius: 10px; transition: width 0.3s ease;"></div>
+                    </div>
+                    
+                    <div id="trendProgressText" style="text-align: center; font-weight: 600;">Progress: 0% Complete</div>
                 </div>
             </div>
         </div>
@@ -1038,6 +851,14 @@
                     <div class="reference-item"><strong>Phone:</strong> 817-480-5662</div>
                     <div class="reference-item"><strong>Etsy:</strong> etsy.com/shop/shelfgratification</div>
                     <div class="reference-item"><strong>Chat with Claude:</strong> claude.ai</div>
+                </div>
+
+                <div class="reference-card">
+                    <h3>🔍 Trend Monitoring Keywords</h3>
+                    <div class="reference-item"><strong>Primary:</strong> bookish accessories, kindle stickers, book bookmarks, reading aesthetic</div>
+                    <div class="reference-item"><strong>Secondary:</strong> booktok, book girlfriend, romantasy, dark academia, kindle setup</div>
+                    <div class="reference-item"><strong>Seasonal:</strong> summer reading, beach reads, vacation bookmarks, travel kindle</div>
+                    <div class="reference-item"><strong>Trending:</strong> Check daily email reports for current hot keywords</div>
                 </div>
             </div>
         </div>
@@ -1112,12 +933,11 @@ Your Launch Companion App
     </div>
 
     <script>
-        // Complete 90-day task data
+        // Sample task data for the full 90-day calendar
         const taskData = {
             1: {
                 title: "Day 1 - Monday: Brand & Platform Setup + Inclusive Brand Launch",
                 time: "2.5 hours",
-                workstreams: ["brand", "automation"],
                 tasks: [
                     { text: "Implement whimsical color palette across existing materials", time: "45 min", detail: "Use the Whimsical Wonder palette: Bubblegum Pink (#FFB6D9), Lavender Dream (#D7A9F9), Mint Fresh (#A8E6CF), Sunshine Yellow (#FFD93D), Cherry Pop (#FF6B98)" },
                     { text: "Set up Make.com account (free tier)", time: "30 min", detail: "Go to make.com, create account, explore the interface. This will be your automation hub." },
@@ -1133,7 +953,6 @@ Your Launch Companion App
             2: {
                 title: "Day 2 - Tuesday: Social Media Foundation + Lemon8 Early Adoption",
                 time: "2.5 hours",
-                workstreams: ["brand", "community"],
                 tasks: [
                     { text: "Convert Instagram to Business Account", time: "20 min", detail: "Essential for Instagram Shopping and analytics access" },
                     { text: "Set up Instagram Shopping", time: "40 min", detail: "Connect to Facebook catalog for product tagging" },
@@ -1150,522 +969,39 @@ Your Launch Companion App
             3: {
                 title: "Day 3 - Wednesday: Content Preparation + Inclusive Brand Launch",
                 time: "3 hours",
-                workstreams: ["brand", "community"],
                 tasks: [
                     { text: "Create first foundation Instagram post (Post #1: Inclusive Brand Introduction)", time: "90 min", detail: "Focus: 'Reading looks different for everyone - we celebrate ALL readers!'" },
                     { text: "Set up Canva Pro account", time: "20 min", detail: "Essential for professional design work" },
                     { text: "Create 3 Canva templates using whimsical color palette + inclusive messaging", time: "45 min", detail: "Templates for regular use across platforms" },
                     { text: "Plan first week's posting schedule with inclusive content themes", time: "25 min", detail: "Map out content calendar with inclusive messaging" }
                 ],
-            },
-            11: {
-                title: "Day 11 - Thursday: Format Friday Launch & Community Building",
-                time: "1.5 hours",
-                workstreams: ["community", "brand"],
-                tasks: [
-                    { text: "Post Instagram 'Format Friday' content #3 (celebrate all reading formats equally)", time: "30 min", detail: "Show physical + digital + audio reading with equal enthusiasm" },
-                    { text: "Pin 10 high-quality inclusive bookish images to Pinterest", time: "30 min", detail: "Focus on accessibility and format diversity themes" },
-                    { text: "Create first Lemon8 post showcasing accessibility tools with whimsical aesthetic", time: "20 min", detail: "Make accessibility tools look beautiful and desirable" },
-                    { text: "Reach out to 3 neurodivergent BookTokkers for potential collaboration", time: "10 min", detail: "Build authentic partnerships with diverse creators" }
-                ],
                 tomorrow: {
-                    title: "Platform Research + Lemon8 Community Building",
-                    prep: "Research Amazon requirements and prepare for seller account setup."
-                }
-            },
-            12: {
-                title: "Day 12 - Friday: Platform Research + Lemon8 Community Building",
-                time: "2.5 hours",
-                workstreams: ["platform", "community"],
-                tasks: [
-                    { text: "Research Amazon requirements for bookish products", time: "45 min", detail: "Understand FBA, product categories, and approval processes" },
-                    { text: "Analyze top 5 competitors' pricing strategies", time: "30 min", detail: "Study successful bookish brands on Amazon" },
-                    { text: "Create Amazon seller account (don't list yet)", time: "30 min", detail: "Set up basic account and payment information" },
-                    { text: "Document product categories and requirements", time: "15 min", detail: "Note which products are eligible for Amazon" },
-                    { text: "Engage with bookish creators on Lemon8 and build following", time: "30 min", detail: "Comment meaningfully and build authentic connections" }
-                ],
-                tomorrow: {
-                    title: "Automation Testing",
-                    prep: "Prepare to test all automation workflows thoroughly."
-                }
-            },
-            13: {
-                title: "Day 13 - Saturday: Automation Testing",
-                time: "2.5 hours",
-                workstreams: ["automation"],
-                tasks: [
-                    { text: "Run full Make.com scenario test", time: "45 min", detail: "Test all automation workflows end-to-end" },
-                    { text: "Generate 5 automated captions and review quality", time: "30 min", detail: "Ensure AI-generated content matches brand voice" },
-                    { text: "Adjust ChatGPT prompts for better output", time: "45 min", detail: "Refine prompts for more inclusive and on-brand results" },
-                    { text: "Plan Week 3 automation additions", time: "30 min", detail: "Identify next automation opportunities" }
-                ],
-                tomorrow: {
-                    title: "Analytics Setup + Lemon8 Performance Review",
-                    prep: "Prepare for comprehensive analytics review across all platforms."
-                }
-            },
-            14: {
-                title: "Day 14 - Sunday: Analytics Setup + Lemon8 Performance Review",
-                time: "2 hours",
-                workstreams: ["all"],
-                tasks: [
-                    { text: "Set up Instagram Insights tracking", time: "30 min", detail: "Monitor demographic diversity and engagement patterns" },
-                    { text: "Create Pinterest Analytics dashboard", time: "30 min", detail: "Track accessibility content performance" },
-                    { text: "Document Week 2 performance metrics across all platforms", time: "20 min", detail: "Record follower growth, engagement, and diversity metrics" },
-                    { text: "Analyze early Lemon8 performance and adjust strategy", time: "20 min", detail: "Identify what content resonates with Lemon8 audience" },
-                    { text: "Plan Week 3 content themes with emphasis on Lemon8 growth", time: "20 min", detail: "Develop platform-specific content strategy" }
-                ],
-                tomorrow: {
-                    title: "Visual Content Excellence",
-                    prep: "Prepare for intensive visual content creation and Canva automation."
-                }
-            },
-            15: {
-                title: "Day 15 - Monday: Visual Content Excellence",
-                time: "2.5 hours",
-                workstreams: ["brand", "automation"],
-                tasks: [
-                    { text: "Post Instagram foundation content #4 (Customer Stories)", time: "30 min", detail: "Feature diverse customers using products inclusively" },
-                    { text: "Add Canva automation to Make.com workflow", time: "60 min", detail: "Automate visual content creation process" },
-                    { text: "Create 5 Pinterest-optimized images", time: "45 min", detail: "Focus on accessibility and inclusive reading themes" },
-                    { text: "Test automated image creation process", time: "15 min", detail: "Verify Canva automation produces quality results" }
-                ],
-                tomorrow: {
-                    title: "Product Development",
-                    prep: "Research trending BookTok themes for new inclusive product concepts."
-                }
-            },
-            16: {
-                title: "Day 16 - Tuesday: Product Development",
-                time: "2 hours",
-                workstreams: ["platform", "brand"],
-                tasks: [
-                    { text: "Research trending BookTok themes for new products", time: "30 min", detail: "Identify gaps in accessibility and inclusive products" },
-                    { text: "Create 'Romantasy' themed product line concepts", time: "45 min", detail: "Design inclusive products for fastest-growing genre" },
-                    { text: "Design 3 new digital download concepts", time: "30 min", detail: "Focus on TBR management and reading anxiety support" },
-                    { text: "Plan seasonal product calendar", time: "15 min", detail: "Map holiday themes and accessibility awareness months" }
-                ],
-                tomorrow: {
-                    title: "Etsy Expansion",
-                    prep: "Prepare new product listings and shop aesthetic updates."
-                }
-            },
-            17: {
-                title: "Day 17 - Wednesday: Etsy Expansion",
-                time: "2.5 hours",
-                workstreams: ["platform"],
-                tasks: [
-                    { text: "List 2 new products using optimized strategies", time: "60 min", detail: "Apply inclusive keywords and accessibility-focused descriptions" },
-                    { text: "Update shop banner/logo with whimsical branding", time: "30 min", detail: "Ensure consistent inclusive messaging across shop" },
-                    { text: "Create cohesive shop aesthetic across all listings", time: "45 min", detail: "Maintain whimsical, accessible visual identity" },
-                    { text: "Implement customer review follow-up process", time: "15 min", detail: "Create templates for engaging with diverse customers" }
-                ],
-                tomorrow: {
-                    title: "Social Media Growth",
-                    prep: "Prepare for Instagram Reel creation and Pinterest video content."
-                }
-            },
-            18: {
-                title: "Day 18 - Thursday: Social Media Growth",
-                time: "2 hours",
-                workstreams: ["community", "brand"],
-                tasks: [
-                    { text: "Post Instagram foundation content #5 (Reading Spaces)", time: "20 min", detail: "Showcase accessible and inclusive reading environments" },
-                    { text: "Collaborate with 3 bookish accounts (comments/shares)", time: "30 min", detail: "Build authentic community connections" },
-                    { text: "Create first Pinterest video pin", time: "45 min", detail: "Show accessibility tools in action" },
-                    { text: "Expand Lemon8 presence with 3 posts this week", time: "25 min", detail: "Increase posting frequency for algorithm benefits" }
-                ],
-                tomorrow: {
-                    title: "Automation Integration",
-                    prep: "Prepare for Instagram Business integration with Make.com."
-                }
-            },
-            19: {
-                title: "Day 19 - Friday: Automation Integration",
-                time: "2.5 hours",
-                workstreams: ["automation"],
-                tasks: [
-                    { text: "Connect Instagram Business to Make.com", time: "45 min", detail: "Set up cross-platform content distribution" },
-                    { text: "Create automated posting scenario (with approval)", time: "60 min", detail: "Automate content sharing while maintaining quality control" },
-                    { text: "Test cross-platform content distribution", time: "30 min", detail: "Verify content appears correctly across platforms" },
-                    { text: "Set up error notifications to your email", time: "15 min", detail: "Monitor automation health proactively" }
-                ],
-                tomorrow: {
-                    title: "Content Strategy",
-                    prep: "Prepare for comprehensive content performance analysis."
-                }
-            },
-            20: {
-                title: "Day 20 - Saturday: Content Strategy",
-                time: "3 hours",
-                workstreams: ["brand", "community"],
-                tasks: [
-                    { text: "Analyze which content types perform best", time: "45 min", detail: "Focus on inclusive content engagement patterns" },
-                    { text: "Create content template library in Canva", time: "90 min", detail: "Build reusable templates for consistent branding" },
-                    { text: "Plan upcoming seasonal content (next month)", time: "30 min", detail: "Incorporate accessibility awareness themes" },
-                    { text: "Batch create 10 bookish quotes graphics", time: "15 min", detail: "Focus on inclusive and encouraging messages" }
-                ],
-                tomorrow: {
-                    title: "Three-Week Review",
-                    prep: "Prepare for comprehensive progress analysis across all areas."
-                }
-            },
-            21: {
-                title: "Day 21 - Sunday: Three-Week Review",
-                time: "2 hours",
-                workstreams: ["all"],
-                tasks: [
-                    { text: "Complete performance analysis across all platforms", time: "45 min", detail: "Review growth, engagement, and demographic diversity" },
-                    { text: "Adjust strategies based on data", time: "30 min", detail: "Optimize for better inclusive community building" },
-                    { text: "Plan Month 2 priorities", time: "30 min", detail: "Focus on accessibility product development" },
-                    { text: "Celebrate wins and document lessons learned", time: "15 min", detail: "Acknowledge progress and identify improvements" }
-                ],
-                tomorrow: {
-                    title: "Advanced Automation",
-                    prep: "Prepare for Pinterest automation and customer engagement workflows."
-                }
-            },
-            22: {
-                title: "Day 22 - Monday: Advanced Automation",
-                time: "2.5 hours",
-                workstreams: ["automation", "brand"],
-                tasks: [
-                    { text: "Post Instagram foundation content #6 (Book Recommendations)", time: "20 min", detail: "Feature diverse authors and accessible formats" },
-                    { text: "Add Pinterest automation to Make.com", time: "60 min", detail: "Automate pin creation and scheduling" },
-                    { text: "Create customer engagement automation workflow", time: "60 min", detail: "Automate follow-ups while maintaining personal touch" },
-                    { text: "Test all automated systems together", time: "30 min", detail: "Ensure all automations work harmoniously" }
-                ],
-                tomorrow: {
-                    title: "Market Research",
-                    prep: "Prepare for deep dive into Amazon and accessibility product opportunities."
-                }
-            },
-            23: {
-                title: "Day 23 - Tuesday: Market Research",
-                time: "2.5 hours",
-                workstreams: ["platform"],
-                tasks: [
-                    { text: "Research Amazon bookish product demand", time: "45 min", detail: "Focus on accessibility and inclusive reading products" },
-                    { text: "Analyze competitor pricing on multiple platforms", time: "30 min", detail: "Position products competitively while maintaining quality" },
-                    { text: "Identify 5 low-competition, high-demand product opportunities", time: "45 min", detail: "Focus on underserved accessibility markets" },
-                    { text: "Create product development roadmap", time: "30 min", detail: "Plan accessibility product line expansion" }
-                ],
-                tomorrow: {
-                    title: "Etsy Mastery",
-                    prep: "Prepare for advanced Etsy optimization and advertising setup."
-                }
-            },
-            24: {
-                title: "Day 24 - Wednesday: Etsy Mastery",
-                time: "3 hours",
-                workstreams: ["platform"],
-                tasks: [
-                    { text: "Optimize all remaining product listings", time: "90 min", detail: "Apply inclusive keywords and accessibility benefits" },
-                    { text: "Create product bundles based on customer behavior", time: "45 min", detail: "Bundle complementary accessibility tools" },
-                    { text: "Implement advanced SEO strategies", time: "30 min", detail: "Use long-tail keywords for accessibility niches" },
-                    { text: "Set up Etsy advertising campaigns", time: "15 min", detail: "Target inclusive reading and accessibility keywords" }
-                ],
-                tomorrow: {
-                    title: "Content Excellence",
-                    prep: "Prepare for first Instagram Reel and Pinterest advertising launch."
-                }
-            },
-            25: {
-                title: "Day 25 - Thursday: Content Excellence",
-                time: "2.5 hours",
-                workstreams: ["brand", "community"],
-                tasks: [
-                    { text: "Post Instagram foundation content #7 (Whimsical Workspace)", time: "20 min", detail: "Show accessible and inclusive reading setups" },
-                    { text: "Create first Instagram Reel showcasing products", time: "60 min", detail: "Focus on accessibility features and diverse usage" },
-                    { text: "Launch Pinterest advertising for top performing pins", time: "30 min", detail: "Promote accessibility and inclusive content" },
-                    { text: "Establish Lemon8 posting routine (3x/week)", time: "20 min", detail: "Consistent presence for algorithm benefits" }
-                ],
-                tomorrow: {
-                    title: "Community Building",
-                    prep: "Prepare for first Instagram Live and community hashtag creation."
-                }
-            },
-            26: {
-                title: "Day 26 - Friday: Community Building",
-                time: "2 hours",
-                workstreams: ["community"],
-                tasks: [
-                    { text: "Host first Instagram Live or Stories Q&A", time: "45 min", detail: "Answer questions about inclusive reading and accessibility" },
-                    { text: "Create bookish community hashtag", time: "15 min", detail: "Develop #ShelfGratificationForAll community tag" },
-                    { text: "Engage with customer posts/reviews", time: "30 min", detail: "Build authentic relationships with diverse customers" },
-                    { text: "Plan customer feature content", time: "30 min", detail: "Showcase diverse readers using products" }
-                ],
-                tomorrow: {
-                    title: "Systems Check",
-                    prep: "Prepare for comprehensive automation audit and optimization."
-                }
-            },
-            27: {
-                title: "Day 27 - Saturday: Systems Check",
-                time: "2.5 hours",
-                workstreams: ["automation"],
-                tasks: [
-                    { text: "Full audit of all automation workflows", time: "60 min", detail: "Check performance, errors, and optimization opportunities" },
-                    { text: "Optimize any underperforming processes", time: "45 min", detail: "Improve automation efficiency and reliability" },
-                    { text: "Create backup plans for system failures", time: "30 min", detail: "Ensure business continuity with manual processes" },
-                    { text: "Document standard operating procedures", time: "15 min", detail: "Create guides for maintaining automations" }
-                ],
-                tomorrow: {
-                    title: "Month 1 Complete Analysis",
-                    prep: "Prepare for comprehensive month-end review and Month 2 planning."
-                }
-            },
-            28: {
-                title: "Day 28 - Sunday: Month 1 Complete Analysis",
-                time: "2.5 hours",
-                workstreams: ["all"],
-                tasks: [
-                    { text: "Comprehensive metrics review across all platforms", time: "60 min", detail: "Analyze growth, engagement, and demographic diversity" },
-                    { text: "Calculate ROI on automation investments", time: "30 min", detail: "Measure efficiency gains and cost savings" },
-                    { text: "Adjust Month 2 strategy based on learnings", time: "45 min", detail: "Optimize approach for accessibility product focus" },
-                    { text: "Plan Month 2 product launches", time: "15 min", detail: "Schedule accessibility product rollout" }
-                ],
-                tomorrow: {
-                    title: "Accessibility Product Development + Inclusive Marketing",
-                    prep: "Begin Month 2 focus on accessibility product launch and inclusive advertising."
-                }
-            },
-            29: {
-                title: "Day 29 - Monday: Accessibility Product Development + Inclusive Marketing",
-                time: "3 hours",
-                workstreams: ["platform", "community"],
-                tasks: [
-                    { text: "Design first accessibility product concept", time: "90 min", detail: "Create beautiful, whimsical accessibility tools" },
-                    { text: "Research disability advocates for partnerships", time: "30 min", detail: "Identify authentic collaboration opportunities" },
-                    { text: "Create inclusive advertising testing campaign", time: "45 min", detail: "Test accessibility-focused ad messaging" },
-                    { text: "Plan 'Reading Looks Different' series expansion", time: "15 min", detail: "Develop ongoing diversity celebration content" }
-                ],
-                tomorrow: {
-                    title: "Format-Fluid Reader Campaign",
-                    prep: "Prepare to launch signature #FormatFluidReader campaign."
-                }
-            },
-            30: {
-                title: "Day 30 - Tuesday: Format-Fluid Reader Campaign",
-                time: "2.5 hours",
-                workstreams: ["community", "brand"],
-                tasks: [
-                    { text: "Launch #FormatFluidReader campaign across all platforms", time: "60 min", detail: "Celebrate readers who use multiple formats" },
-                    { text: "Create format comparison content (audio + digital + physical)", time: "45 min", detail: "Show equal enthusiasm for all reading methods" },
-                    { text: "Partner with multi-format readers for testimonials", time: "30 min", detail: "Feature real customers' format journeys" },
-                    { text: "Plan Month 2 accessibility expansion strategy", time: "15 min", detail: "Outline accessibility product development timeline" }
-                ],
-                tomorrow: {
-                    title: "Month 2 Deep Dive Continues",
-                    prep: "Continue building accessibility product line and inclusive community."
-                }
-            },
-            4: {
-                title: "Day 4 - Thursday: Etsy Optimization Begin",
-                time: "2.5 hours",
-                workstreams: ["platform", "brand"],
-                tasks: [
-                    { text: "Audit current Etsy listings", time: "45 min", detail: "Review titles, descriptions, tags, and photos for optimization opportunities" },
-                    { text: "Optimize annotation kit listing title (use provided template)", time: "30 min", detail: "Apply SEO best practices and inclusive keywords" },
-                    { text: "Update 2 product photos with better lighting/staging", time: "60 min", detail: "Focus on accessibility angles and diverse usage scenarios" },
-                    { text: "Research top 20 bookish keywords for your niche", time: "35 min", detail: "Use tools like eRank or Marmalead for keyword research" }
-                ],
-                tomorrow: {
-                    title: "Automation Setup Start + Lemon8 Strategy",
-                    prep: "Have Etsy shop URL ready for Make.com integration. Think about Lemon8 content themes."
+                    title: "Etsy Optimization Begin",
+                    prep: "Review current Etsy listings and prepare for optimization work. Have product photos ready for updates."
                 }
             },
             5: {
-                title: "Day 5 - Friday: Automation Setup Start + Lemon8 Strategy",
-                time: "2.5 hours",
-                workstreams: ["automation", "community"],
-                tasks: [
-                    { text: "Connect Etsy shop to Make.com using built-in module", time: "45 min", detail: "Set up basic connection and test integration" },
-                    { text: "Create first simple scenario: New listing → Email notification", time: "30 min", detail: "Basic automation to notify you of new listings" },
-                    { text: "Test scenario with 'Run Once' feature", time: "15 min", detail: "Verify automation is working correctly" },
-                    { text: "Document any errors for troubleshooting", time: "15 min", detail: "Keep track of issues for future reference" },
-                    { text: "Create Lemon8 content strategy focusing on bookish aesthetics + inclusivity", time: "30 min", detail: "Plan content themes that showcase format diversity" },
-                    { text: "Plan weekend content creation including Lemon8-specific posts", time: "15 min", detail: "Prepare for weekend content creation session" }
-                ],
-                tomorrow: {
-                    title: "Inclusive Content Creation",
-                    prep: "Set up photo area for diverse reading scenarios. Plan inclusive messaging for weekend content."
-                }
-            },
-            6: {
-                title: "Day 6 - Saturday: Inclusive Content Creation",
-                time: "3.5 hours",
-                workstreams: ["brand", "community"],
-                tasks: [
-                    { text: "Photograph products for Posts #2-4 focusing on diverse usage scenarios", time: "2 hours", detail: "Include accessibility angles, different reading formats, various reader types" },
-                    { text: "Write captions for first week using inclusive messaging templates", time: "45 min", detail: "Focus on celebrating all readers and reading formats" },
-                    { text: "Create Story Highlights covers: 'All Readers Welcome', 'Format Love', 'Reader Stories'", time: "30 min", detail: "Design cohesive highlight covers with inclusive themes" },
-                    { text: "Research inclusive hashtag strategy and plan #AllFormatsWelcome campaign", time: "15 min", detail: "Build hashtag sets that promote format inclusivity" }
-                ],
-                tomorrow: {
-                    title: "Week Review & Planning",
-                    prep: "Prepare to review first week's progress and plan Week 2 content."
-                }
-            },
-            7: {
-                title: "Day 7 - Sunday: Week Review & Planning",
-                time: "1.5 hours",
-                workstreams: ["all"],
-                tasks: [
-                    { text: "Review Make.com scenario performance", time: "20 min", detail: "Check automation success rate and any errors" },
-                    { text: "Analyze first post engagement", time: "20 min", detail: "Look at likes, comments, saves, and demographic diversity" },
-                    { text: "Plan Week 2 content calendar", time: "30 min", detail: "Schedule inclusive content themes for upcoming week" },
-                    { text: "Set up weekly review routine", time: "20 min", detail: "Create template for ongoing weekly assessments" }
-                ],
-                tomorrow: {
-                    title: "Inclusive Social Media Launch",
-                    prep: "Prepare for Week 2 launch with 'Reading Looks Different' series kickoff."
-                }
-            },
-            8: {
-                title: "Day 8 - Monday: Inclusive Social Media Launch",
-                time: "1.5 hours",
-                workstreams: ["community", "brand"],
-                tasks: [
-                    { text: "Post Instagram foundation content #2 ('Reading Looks Different' - showcase format diversity)", time: "20 min", detail: "Launch signature series celebrating reading diversity" },
-                    { text: "Create Pinterest boards: 'Reading Accessibility Ideas', 'Inclusive Reading Nooks'", time: "40 min", detail: "Establish Pinterest presence with inclusive themes" },
-                    { text: "Cross-post to Lemon8 with #AllFormatsWelcome messaging", time: "15 min", detail: "Expand reach to new platform with consistent messaging" },
-                    { text: "Engage with diverse bookish accounts and accessibility advocates", time: "15 min", detail: "Build community connections with inclusive focus" }
-                ],
-                tomorrow: {
-                    title: "Automation Expansion + Lemon8 Growth",
-                    prep: "Prepare for ChatGPT integration and Lemon8 content creation."
-                }
-            },
-            9: {
-                title: "Day 9 - Tuesday: Automation Expansion + Lemon8 Growth",
-                time: "2.5 hours",
-                workstreams: ["automation", "community"],
-                tasks: [
-                    { text: "Add ChatGPT module to Make.com scenario", time: "45 min", detail: "Integrate AI content generation into automation workflow" },
-                    { text: "Create: New listing → ChatGPT caption → Email workflow", time: "45 min", detail: "Automate caption generation for new product listings" },
-                    { text: "Test with actual Etsy listing", time: "15 min", detail: "Verify AI-generated captions are appropriate and on-brand" },
-                    { text: "Troubleshoot any API connection issues", time: "15 min", detail: "Debug and resolve any technical problems" },
-                    { text: "Create first native Lemon8 content (not cross-posted) - bookish flat lay with inclusive messaging", time: "30 min", detail: "Develop platform-specific content for Lemon8 audience" }
-                ],
-                tomorrow: {
-                    title: "Etsy SEO Deep Dive",
-                    prep: "Prepare for intensive Etsy optimization work with keyword research results."
-                }
-            },
-            10: {
-                title: "Day 10 - Wednesday: Etsy SEO Deep Dive",
+                title: "Day 5 - Friday: Automation Setup + Trend Monitoring Foundation",
                 time: "3 hours",
-                workstreams: ["platform"],
                 tasks: [
-                    { text: "Optimize 3 more product listings with new titles", time: "90 min", detail: "Apply inclusive keywords and accessibility-focused tags" },
-                    { text: "Update all product tags using research from Day 4", time: "45 min", detail: "Implement high-demand, low-saturation keywords" },
-                    { text: "Improve 5 product descriptions with conversion-focused copy", time: "60 min", detail: "Include accessibility benefits and format inclusivity" },
-                    { text: "Add lifestyle context photos to 2 listings", time: "45 min", detail: "Show products in diverse usage scenarios" }
+                    { text: "Connect Etsy shop to Make.com using built-in module", time: "45 min", detail: "Essential for product automation pipeline" },
+                    { text: "Create first simple scenario: New listing → Email notification", time: "30 min", detail: "Test basic automation functionality" },
+                    { text: "Set up Google Trends monitoring system (NEW!)", time: "45 min", detail: "Foundation for trend-responsive product creation - use Trend Monitor tab in this app" },
+                    { text: "Test trend monitoring scenario with 'Run Once' feature", time: "15 min", detail: "Verify trend data flows correctly" },
+                    { text: "Create Lemon8 content strategy focusing on bookish aesthetics + inclusivity", time: "30 min", detail: "Early adoption strategy for emerging platform" },
+                    { text: "Plan weekend content creation including trend-aware posts", time: "15 min", detail: "Integrate trending keywords into content planning" }
                 ],
                 tomorrow: {
-                    title: "Format Friday Launch & Community Building",
-                    prep: "Prepare Format Friday content celebrating all reading formats equally."
+                    title: "Inclusive Content Creation + Trend Integration",
+                    prep: "Review first trend report (if system is working), have trending keywords ready for content creation. Focus on diverse usage scenarios in product photography."
                 }
             }
+            // Add more days as needed...
         };
 
         let currentDay = 1;
-        let todayDay = 1; // What day it actually is today
         let completedTasks = {};
         let dailyNotes = {};
-
-        // Navigation functions
-        function navigateDay(direction) {
-            const newDay = currentDay + direction;
-            if (newDay >= 1 && newDay <= 90) {
-                currentDay = newDay;
-                loadDay(currentDay);
-                updateDayDisplay();
-                updateNavigationButtons();
-                saveCurrentDay();
-            }
-        }
-
-        function jumpToToday() {
-            currentDay = todayDay;
-            loadDay(currentDay);
-            updateDayDisplay();
-            updateNavigationButtons();
-            saveCurrentDay();
-        }
-
-        function updateDayDisplay() {
-            const dayCounter = document.getElementById('dayCounter');
-            const dayProgress = document.getElementById('dayProgress');
-            
-            if (dayCounter) dayCounter.textContent = `Day ${currentDay}`;
-            if (dayProgress) dayProgress.textContent = `${currentDay} of 90 days (${Math.round((currentDay/90)*100)}%)`;
-            
-            updateDayStatus();
-        }
-
-        function updateDayStatus() {
-            const dayStatus = document.getElementById('dayStatus');
-            if (!dayStatus) return;
-            
-            const dayDifference = currentDay - todayDay;
-            
-            if (dayDifference === 0) {
-                dayStatus.textContent = '📅 Today';
-                dayStatus.style.background = 'var(--mint-fresh)';
-                dayStatus.style.color = 'var(--text-dark)';
-            } else if (dayDifference < 0) {
-                dayStatus.textContent = `📖 ${Math.abs(dayDifference)} day${Math.abs(dayDifference) > 1 ? 's' : ''} ago`;
-                dayStatus.style.background = 'var(--lavender-dream)';
-                dayStatus.style.color = 'white';
-            } else {
-                dayStatus.textContent = `🔮 ${dayDifference} day${dayDifference > 1 ? 's' : ''} ahead`;
-                dayStatus.style.background = 'var(--sunshine-yellow)';
-                dayStatus.style.color = 'var(--text-dark)';
-            }
-        }
-
-        function updateNavigationButtons() {
-            const prevBtn = document.getElementById('prevBtn');
-            const nextBtn = document.getElementById('nextBtn');
-            const todayBtn = document.getElementById('todayBtn');
-            
-            // Disable/enable navigation buttons
-            if (prevBtn) prevBtn.disabled = currentDay <= 1;
-            if (nextBtn) nextBtn.disabled = currentDay >= 90;
-            
-            // Show/hide Today button
-            if (todayBtn) {
-                todayBtn.style.display = currentDay === todayDay ? 'none' : 'inline-block';
-            }
-        }
-
-        function saveCurrentDay() {
-            if (storageAvailable) {
-                try {
-                    localStorage.setItem('currentViewDay', currentDay.toString());
-                } catch (e) {
-                    console.log('Could not save current day:', e.message);
-                }
-            }
-        }
-
-        function loadCurrentDay() {
-            if (storageAvailable) {
-                try {
-                    const saved = localStorage.getItem('currentViewDay');
-                    if (saved) {
-                        const savedDay = parseInt(saved);
-                        if (savedDay >= 1 && savedDay <= 90) {
-                            currentDay = savedDay;
-                        }
-                    }
-                } catch (e) {
-                    console.log('Could not load current day:', e.message);
-                }
-            }
-        }
 
         // Storage helper functions with fallback
         let storageAvailable = false;
@@ -1742,121 +1078,25 @@ Your Launch Companion App
             }
         }
 
-        // Auto-calculate current day function
-        function autoCalculateDay() {
-            const startDate = new Date('2025-06-01'); // Launch start date
-            const today = new Date();
+        // Calculate day function
+        function calculateDay() {
+            const startDateInput = document.getElementById('startDate');
+            const currentDateInput = document.getElementById('currentDate');
             
-            // Set today's date in the input
-            const todayInput = document.getElementById('currentDate');
-            if (todayInput) {
-                todayInput.value = today.toISOString().split('T')[0];
-            }
+            if (!startDateInput || !currentDateInput) return;
             
-            // Calculate day difference
-            const timeDiff = today.getTime() - startDate.getTime();
+            const startDate = new Date(startDateInput.value);
+            const currentDate = new Date(currentDateInput.value);
+            const timeDiff = currentDate.getTime() - startDate.getTime();
             const dayDiff = Math.ceil(timeDiff / (1000 * 3600 * 24)) + 1;
             
-            // Set todayDay (what day it actually is)
             if (dayDiff > 0 && dayDiff <= 90) {
-                todayDay = dayDiff;
+                currentDay = dayDiff;
+                loadDay(currentDay);
             } else if (dayDiff <= 0) {
-                todayDay = 0; // Pre-launch
+                alert('🚀 Launch hasn\'t started yet! Get ready for the big day!');
             } else {
-                todayDay = 91; // Post-launch
-            }
-            
-            // Load saved current day or default to today
-            loadCurrentDay();
-            
-            // If no saved day, start with today
-            if (currentDay === 1 && todayDay > 1) {
-                currentDay = Math.max(1, Math.min(90, todayDay));
-            }
-            
-            // Handle special cases
-            if (todayDay <= 0) {
-                const daysUntilLaunch = Math.abs(dayDiff) + 1;
-                const dayCounter = document.getElementById('dayCounter');
-                const dayProgress = document.getElementById('dayProgress');
-                
-                if (dayCounter) dayCounter.textContent = `${daysUntilLaunch} days to go!`;
-                if (dayProgress) dayProgress.textContent = 'Launch starts June 1, 2025';
-                
-                // Show pre-launch message
-                showPreLaunchContent(daysUntilLaunch);
-                updateNavigationButtons();
-                return;
-            } else if (todayDay > 90) {
-                // Post-launch: still allow navigation through all 90 days
-                if (currentDay === 1) currentDay = 90; // Default to last day
-            }
-            
-            // Load the current day
-            loadDay(currentDay);
-            updateDayDisplay();
-            updateNavigationButtons();
-        }
-
-        function showPreLaunchContent(daysUntilLaunch) {
-            const dayCard = document.getElementById('dayCard');
-            if (dayCard) {
-                dayCard.innerHTML = `
-                    <div class="day-header">
-                        <div class="day-title">🚀 Get Ready for Launch!</div>
-                        <div class="day-status">⏰ ${daysUntilLaunch} days to go</div>
-                    </div>
-                    <p style="text-align: center; font-size: 18px; padding: 20px;">
-                        Your Shelf Gratification journey begins on <strong>June 1, 2025</strong>!<br>
-                        Use this time to get excited and prepare. 🌈📚✨
-                    </p>
-                    <div class="notes-section">
-                        <h4>📝 Pre-Launch Notes</h4>
-                        <textarea class="notes-textarea" id="dayNotes" placeholder="Add any preparation thoughts or ideas here...">${dailyNotes['pre-launch'] || ''}</textarea>
-                        <button class="nav-btn" onclick="savePreLaunchNotes()">Save Notes</button>
-                    </div>
-                `;
-            }
-        }
-
-        // Save pre-launch notes
-        function savePreLaunchNotes() {
-            const notesTextarea = document.getElementById('dayNotes');
-            if (!notesTextarea) return;
-            
-            const notes = notesTextarea.value;
-            dailyNotes['pre-launch'] = notes;
-            saveStoredData();
-            
-            showSaveConfirmation();
-        }
-
-        // Save post-launch notes  
-        function savePostLaunchNotes() {
-            const notesTextarea = document.getElementById('dayNotes');
-            if (!notesTextarea) return;
-            
-            const notes = notesTextarea.value;
-            dailyNotes['post-launch'] = notes;
-            saveStoredData();
-            
-            showSaveConfirmation();
-        }
-
-        // Show save confirmation
-        function showSaveConfirmation() {
-            const buttons = document.querySelectorAll('.nav-btn');
-            const saveButton = Array.from(buttons).find(btn => btn.textContent.includes('Save'));
-            if (saveButton) {
-                const originalText = saveButton.textContent;
-                const originalBg = saveButton.style.background;
-                saveButton.textContent = '✅ Saved!';
-                saveButton.style.background = '#A8E6CF';
-                
-                setTimeout(() => {
-                    saveButton.textContent = originalText;
-                    saveButton.style.background = originalBg;
-                }, 2000);
+                alert('🎉 Congratulations! You\'ve completed your 90-day launch journey!');
             }
         }
 
@@ -1922,7 +1162,7 @@ Your Launch Companion App
             updateProgress();
         }
 
-        // Toggle task function with milestone detection
+        // Toggle task function
         function toggleTask(checkbox, taskIndex) {
             if (!completedTasks[currentDay]) {
                 completedTasks[currentDay] = [];
@@ -1931,19 +1171,7 @@ Your Launch Companion App
             if (checkbox.checked) {
                 if (!completedTasks[currentDay].includes(taskIndex)) {
                     completedTasks[currentDay].push(taskIndex);
-                    
-                    // Regular task completion celebration
                     showCelebration();
-                    
-                    // Check for milestone celebrations
-                    if (currentDay % 10 === 0) {
-                        setTimeout(() => showMilestoneCelebration(currentDay), 1000);
-                    }
-                    
-                    // Check for weekly celebration (every 7 days)
-                    if (currentDay % 7 === 0) {
-                        setTimeout(() => showWeeklyCelebration(), 500);
-                    }
                 }
                 checkbox.closest('.task-item').classList.add('completed');
             } else {
@@ -1955,24 +1183,15 @@ Your Launch Companion App
             updateProgress();
         }
 
-        // Enhanced kawaii celebration function
+        // Show celebration function
         function showCelebration() {
             const celebration = document.getElementById('celebration');
             if (!celebration) return;
             
-            // Kawaii celebration emojis matching the cute aesthetic
-            const celebrationEmojis = ['🌟', '✨', '💖', '🎉', '🌈', '📚', '☕', '🎊', '💫', '🦄'];
-            const randomEmoji = celebrationEmojis[Math.floor(Math.random() * celebrationEmojis.length)];
-            
-            celebration.textContent = randomEmoji;
+            const celebrationEmojis = ['🎉', '✨', '🌟', '🎊', '💫', '🙌', '🎈'];
+            celebration.textContent = celebrationEmojis[Math.floor(Math.random() * celebrationEmojis.length)];
             celebration.style.opacity = '1';
             celebration.style.transform = 'translate(-50%, -50%) scale(1.5)';
-            
-            // Add floating hearts
-            createFloatingHearts();
-            
-            // Add confetti
-            createKawaiiConfetti();
             
             setTimeout(() => {
                 celebration.style.opacity = '0';
@@ -1980,111 +1199,7 @@ Your Launch Companion App
             }, 2000);
         }
 
-        // Create floating hearts animation
-        function createFloatingHearts() {
-            const heartsContainer = document.createElement('div');
-            heartsContainer.className = 'celebration-hearts';
-            document.body.appendChild(heartsContainer);
-            
-            const heartEmojis = ['💖', '💕', '💗', '💘', '💝'];
-            
-            for (let i = 0; i < 8; i++) {
-                const heart = document.createElement('div');
-                heart.className = 'heart';
-                heart.textContent = heartEmojis[Math.floor(Math.random() * heartEmojis.length)];
-                heart.style.left = Math.random() * 100 + '%';
-                heart.style.animationDelay = i * 0.2 + 's';
-                heartsContainer.appendChild(heart);
-            }
-            
-            setTimeout(() => {
-                document.body.removeChild(heartsContainer);
-            }, 3000);
-        }
-
-        // Create kawaii confetti
-        function createKawaiiConfetti() {
-            const confettiContainer = document.createElement('div');
-            confettiContainer.style.position = 'fixed';
-            confettiContainer.style.top = '0';
-            confettiContainer.style.left = '0';
-            confettiContainer.style.width = '100%';
-            confettiContainer.style.height = '100%';
-            confettiContainer.style.pointerEvents = 'none';
-            confettiContainer.style.zIndex = '998';
-            document.body.appendChild(confettiContainer);
-            
-            for (let i = 0; i < 15; i++) {
-                const confetti = document.createElement('div');
-                confetti.className = 'confetti';
-                confetti.style.left = Math.random() * 100 + '%';
-                confetti.style.animationDelay = i * 0.1 + 's';
-                confettiContainer.appendChild(confetti);
-            }
-            
-            setTimeout(() => {
-                document.body.removeChild(confettiContainer);
-            }, 3000);
-        }
-
-        // Weekly celebration for completing all tasks
-        function showWeeklyCelebration() {
-            const celebration = document.getElementById('celebration');
-            if (!celebration) return;
-            
-            celebration.innerHTML = '🎉<br><span style="font-size: 24px;">Week Complete!</span><br>📚✨';
-            celebration.style.opacity = '1';
-            celebration.style.transform = 'translate(-50%, -50%) scale(1)';
-            
-            // Extra special effects for weekly completion
-            createFloatingHearts();
-            createKawaiiConfetti();
-            
-            // Add cute message
-            setTimeout(() => {
-                celebration.innerHTML = '💖<br><span style="font-size: 18px;">You\'re amazing!</span><br>🌈';
-            }, 1000);
-            
-            setTimeout(() => {
-                celebration.style.opacity = '0';
-                celebration.style.transform = 'translate(-50%, -50%) scale(1)';
-            }, 4000);
-        }
-
-        // Milestone celebrations (every 10 days)
-        function showMilestoneCelebration(day) {
-            const celebration = document.getElementById('celebration');
-            if (!celebration) return;
-            
-            const milestoneMessages = {
-                10: '🌟 10 Days Strong! 🌟',
-                20: '✨ 20 Days Amazing! ✨', 
-                30: '🎉 30 Days Incredible! 🎉',
-                40: '💖 40 Days Wonderful! 💖',
-                50: '🌈 Halfway There! 🌈',
-                60: '📚 60 Days Fantastic! 📚',
-                70: '☕ 70 Days Brilliant! ☕',
-                80: '🦄 80 Days Magical! 🦄',
-                90: '🎊 LAUNCH COMPLETE! 🎊'
-            };
-            
-            if (milestoneMessages[day]) {
-                celebration.innerHTML = `<div style="font-size: 32px;">${milestoneMessages[day]}</div>`;
-                celebration.style.opacity = '1';
-                celebration.style.transform = 'translate(-50%, -50%) scale(1)';
-                
-                // Extra special milestone effects
-                createFloatingHearts();
-                createKawaiiConfetti();
-                
-                setTimeout(() => {
-                    celebration.style.opacity = '0';
-                    celebration.style.transform = 'translate(-50%, -50%) scale(1)';
-                }, 5000);
-            }
-        }
-
-        // Save notes function (updated to handle current day)
+        // Save notes function
         function saveNotes() {
             const notesTextarea = document.getElementById('dayNotes');
             if (!notesTextarea) return;
@@ -2093,7 +1208,20 @@ Your Launch Companion App
             dailyNotes[currentDay] = notes;
             saveStoredData();
             
-            showSaveConfirmation();
+            // Show feedback
+            const buttons = document.querySelectorAll('.nav-btn');
+            const saveButton = Array.from(buttons).find(btn => btn.textContent.includes('Save Notes'));
+            if (saveButton) {
+                const originalText = saveButton.textContent;
+                const originalBg = saveButton.style.background;
+                saveButton.textContent = '✅ Saved!';
+                saveButton.style.background = '#A8E6CF';
+                
+                setTimeout(() => {
+                    saveButton.textContent = originalText;
+                    saveButton.style.background = originalBg;
+                }, 2000);
+            }
         }
 
         // Update progress function
@@ -2232,6 +1360,268 @@ Total Days with Notes: ${Object.keys(dailyNotes).length}
             window.URL.revokeObjectURL(url);
         }
 
+        // Trend monitoring functions
+        function saveApiKey() {
+            const apiKey = document.getElementById('apiKeyInput');
+            if (!apiKey) return;
+            
+            const key = apiKey.value.trim();
+            if (key) {
+                if (storageAvailable) {
+                    try {
+                        localStorage.setItem('serpApiKey', key);
+                    } catch(e) {
+                        console.log('Could not save API key');
+                    }
+                }
+                
+                // Update display
+                const displayKey = document.getElementById('displayApiKey');
+                if (displayKey) {
+                    displayKey.textContent = key;
+                }
+                
+                // Show success
+                apiKey.style.background = 'var(--mint-fresh)';
+                setTimeout(() => {
+                    apiKey.style.background = '';
+                }, 2000);
+                
+                showCelebration();
+            }
+        }
+
+        function loadApiKey() {
+            if (!storageAvailable) return;
+            
+            try {
+                const savedKey = localStorage.getItem('serpApiKey');
+                if (savedKey) {
+                    const input = document.getElementById('apiKeyInput');
+                    const display = document.getElementById('displayApiKey');
+                    if (input) input.value = savedKey;
+                    if (display) display.textContent = savedKey;
+                }
+            } catch(e) {
+                console.log('Could not load API key');
+            }
+        }
+
+        function toggleSetupStep(checkbox, stepType) {
+            if (checkbox.checked) {
+                showCelebration();
+            }
+            updateTrendProgress();
+        }
+
+        function updateTrendProgress() {
+            const checkboxes = ['step1', 'step2', 'step3', 'step4', 'step5', 'step6', 'step7'];
+            let completed = 0;
+            
+            checkboxes.forEach(id => {
+                const checkbox = document.getElementById(id);
+                if (checkbox && checkbox.checked) {
+                    completed++;
+                }
+            });
+            
+            const percentage = Math.round((completed / checkboxes.length) * 100);
+            const progressBar = document.getElementById('trendProgress');
+            const progressText = document.getElementById('trendProgressText');
+            
+            if (progressBar) {
+                progressBar.style.width = percentage + '%';
+            }
+            
+            if (progressText) {
+                progressText.textContent = `Progress: ${percentage}% Complete`;
+                
+                if (percentage === 100) {
+                    progressText.innerHTML = `🎉 Trend Monitoring Setup Complete! 🎉<br><small>You'll receive your first report tomorrow at 9 AM</small>`;
+                }
+            }
+            
+            // Save progress if storage available
+            if (storageAvailable) {
+                try {
+                    const progress = {};
+                    checkboxes.forEach(id => {
+                        const checkbox = document.getElementById(id);
+                        if (checkbox) {
+                            progress[id] = checkbox.checked;
+                        }
+                    });
+                    localStorage.setItem('trendProgress', JSON.stringify(progress));
+                } catch(e) {
+                    console.log('Could not save trend progress');
+                }
+            }
+        }
+
+        function loadTrendProgress() {
+            if (!storageAvailable) return;
+            
+            try {
+                const saved = localStorage.getItem('trendProgress');
+                if (saved) {
+                    const progress = JSON.parse(saved);
+                    Object.keys(progress).forEach(id => {
+                        const checkbox = document.getElementById(id);
+                        if (checkbox) {
+                            checkbox.checked = progress[id];
+                        }
+                    });
+                    updateTrendProgress();
+                }
+            } catch(e) {
+                console.log('Could not load trend progress');
+            }
+        }
+
+        function copyMakecomConfig() {
+            const apiKey = document.getElementById('apiKeyInput')?.value || '[YOUR_API_KEY_HERE]';
+            
+            const config = `MAKE.COM CONFIGURATION FOR BOOKISH TRENDS MONITOR
+
+📅 MODULE 1: Schedule Trigger
+- Type: Schedule
+- Frequency: Every day
+- Time: 9:00 AM
+
+🌐 MODULE 2: HTTP Request (Google Trends API)
+- URL: https://serpapi.com/search.json
+- Method: GET
+- Query String Parameters:
+  engine=google_trends
+  q=bookish accessories,kindle stickers,book bookmarks,reading aesthetic,booktok
+  date=today 7-d
+  geo=US
+  api_key=${apiKey}
+
+🤖 MODULE 3: OpenAI ChatGPT
+- Model: gpt-4
+- Max Tokens: 1000
+- Prompt: [Use the detailed prompt from the app]
+
+📧 MODULE 4: Gmail Send Email
+- To: milissa.d.campbell@gmail.com
+- Subject: 🔥 Daily Bookish Trends Report - {{formatDate(now; "MM/DD/YYYY")}}
+- Content: [Use the email template from the app]
+
+Copy this configuration and paste into your Make.com scenario setup!`;
+
+            downloadFile(config, 'Bookish-Trends-Monitor-Config.txt');
+        }
+
+        function showChatGPTPrompt() {
+            const modal = document.createElement('div');
+            modal.className = 'modal';
+            modal.style.display = 'block';
+            modal.innerHTML = `
+                <div class="modal-content" style="max-width: 800px;">
+                    <span class="close-modal" onclick="this.closest('.modal').remove()">&times;</span>
+                    <h3>💬 ChatGPT Analysis Prompt</h3>
+                    <p>Copy this exact prompt for your ChatGPT module in Make.com:</p>
+                    <textarea readonly style="width: 100%; height: 300px; margin: 10px 0; padding: 15px; border-radius: 10px; font-family: monospace; font-size: 12px;">Analyze this Google Trends data for bookish product opportunities:
+
+{{2.data}}
+
+Please identify:
+1. Keywords with increasing search volume (>20% growth)
+2. Seasonal patterns emerging
+3. Specific product opportunities for bookmarks, Kindle accessories, stickers
+4. Competition level (high search + low Etsy listings = opportunity)
+5. Urgency level (1-10 scale)
+
+Format your response as:
+TRENDING OPPORTUNITIES:
+- [Keyword]: [Growth %] - [Product Idea] - [Urgency: X/10]
+
+TOP RECOMMENDATION:
+[Most promising opportunity with specific action steps]
+
+MARKET INSIGHTS:
+[Key observations about bookish trends]</textarea>
+                    <button class="nav-btn" onclick="copyToClipboard(this.previousElementSibling.value)">📋 Copy Prompt</button>
+                </div>
+            `;
+            document.body.appendChild(modal);
+        }
+
+        function showTroubleshootingSteps() {
+            const modal = document.createElement('div');
+            modal.className = 'modal';
+            modal.style.display = 'block';
+            modal.innerHTML = `
+                <div class="modal-content" style="max-width: 700px;">
+                    <span class="close-modal" onclick="this.closest('.modal').remove()">&times;</span>
+                    <h3>🛠️ Detailed Troubleshooting Guide</h3>
+                    
+                    <div style="margin: 15px 0;">
+                        <h4 style="color: var(--cherry-pop);">❌ No Email Received</h4>
+                        <ul style="margin-left: 20px; font-size: 14px;">
+                            <li>Check spam/junk folder first</li>
+                            <li>Verify Gmail connection in Make.com is active</li>
+                            <li>Re-authorize Gmail if needed</li>
+                            <li>Try a test email from Make.com Gmail module</li>
+                        </ul>
+                    </div>
+                    
+                    <div style="margin: 15px 0;">
+                        <h4 style="color: var(--cherry-pop);">🌐 API Error in HTTP Module</h4>
+                        <ul style="margin-left: 20px; font-size: 14px;">
+                            <li>Double-check your SerpAPI key is correct</li>
+                            <li>Verify you haven't exceeded 100 searches/month</li>
+                            <li>Try simplifying query to just "bookish"</li>
+                            <li>Check SerpAPI dashboard for error details</li>
+                        </ul>
+                    </div>
+                    
+                    <div style="margin: 15px 0;">
+                        <h4 style="color: var(--cherry-pop);">🤖 ChatGPT Module Failure</h4>
+                        <ul style="margin-left: 20px; font-size: 14px;">
+                            <li>Check OpenAI API credits remaining</li>
+                            <li>Verify connection is active (green checkmark)</li>
+                            <li>Try reducing Max Tokens to 500</li>
+                            <li>Test with simpler prompt first</li>
+                        </ul>
+                    </div>
+                    
+                    <div style="margin: 15px 0;">
+                        <h4 style="color: var(--cherry-pop);">⚙️ Scenario Won't Run</h4>
+                        <ul style="margin-left: 20px; font-size: 14px;">
+                            <li>Check scenario ON toggle is activated</li>
+                            <li>Verify schedule is set correctly (9 AM daily)</li>
+                            <li>Test with "Run Once" first</li>
+                            <li>Check all modules have green connections</li>
+                        </ul>
+                    </div>
+                    
+                    <div style="background: var(--mint-fresh); padding: 15px; border-radius: 10px; margin: 15px 0;">
+                        <strong>🆘 Still Need Help?</strong><br>
+                        Screenshot the error and note which module is failing. 
+                        Include this info in your next conversation for targeted troubleshooting!
+                    </div>
+                </div>
+            `;
+            document.body.appendChild(modal);
+        }
+
+        function copyToClipboard(text) {
+            navigator.clipboard.writeText(text).then(() => {
+                showCelebration();
+            }).catch(() => {
+                // Fallback for older browsers
+                const textarea = document.createElement('textarea');
+                textarea.value = text;
+                document.body.appendChild(textarea);
+                textarea.select();
+                document.execCommand('copy');
+                document.body.removeChild(textarea);
+                showCelebration();
+            });
+        }
+
         // Initialize app
         document.addEventListener('DOMContentLoaded', function() {
             // Check storage availability first
@@ -2245,9 +1635,15 @@ Total Days with Notes: ${Object.keys(dailyNotes).length}
             
             // Load stored data (if available)
             loadStoredData();
+            loadApiKey();
+            loadTrendProgress();
             
-            // Auto-calculate current day and load appropriate content
-            autoCalculateDay();
+            // Set today's date
+            const today = new Date();
+            const todayInput = document.getElementById('currentDate');
+            if (todayInput) {
+                todayInput.value = today.toISOString().split('T')[0];
+            }
             
             // Set up navigation
             document.querySelectorAll('[data-section]').forEach(btn => {
@@ -2257,12 +1653,20 @@ Total Days with Notes: ${Object.keys(dailyNotes).length}
                 });
             });
             
+            // Load initial day
+            loadDay(currentDay);
+            
+            // Update progress
+            updateProgress();
+            
             // Close modal when clicking outside
             window.addEventListener('click', function(event) {
-                const modal = document.getElementById('chatModal');
-                if (event.target === modal) {
-                    modal.style.display = 'none';
-                }
+                const modals = document.querySelectorAll('.modal');
+                modals.forEach(modal => {
+                    if (event.target === modal) {
+                        modal.style.display = 'none';
+                    }
+                });
             });
         });
 
@@ -2276,48 +1680,7 @@ Total Days with Notes: ${Object.keys(dailyNotes).length}
                 e.preventDefault();
                 saveNotes();
             }
-            // Navigation with arrow keys
-            if (e.key === 'ArrowLeft') {
-                e.preventDefault();
-                navigateDay(-1);
-            }
-            if (e.key === 'ArrowRight') {
-                e.preventDefault();
-                navigateDay(1);
-            }
-            if (e.key === 'Home') {
-                e.preventDefault();
-                jumpToToday();
-            }
         });
-
-        // Mobile swipe support
-        let touchStartX = 0;
-        let touchEndX = 0;
-
-        document.addEventListener('touchstart', function(e) {
-            touchStartX = e.changedTouches[0].screenX;
-        });
-
-        document.addEventListener('touchend', function(e) {
-            touchEndX = e.changedTouches[0].screenX;
-            handleSwipe();
-        });
-
-        function handleSwipe() {
-            const swipeThreshold = 50; // minimum distance for a swipe
-            const swipeDistance = touchEndX - touchStartX;
-            
-            if (Math.abs(swipeDistance) > swipeThreshold) {
-                if (swipeDistance > 0) {
-                    // Swipe right - go to previous day
-                    navigateDay(-1);
-                } else {
-                    // Swipe left - go to next day
-                    navigateDay(1);
-                }
-            }
-        }
     </script>
 </body>
 </html>
